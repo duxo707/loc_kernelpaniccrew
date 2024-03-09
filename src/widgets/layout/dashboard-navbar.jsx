@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Navbar,
@@ -31,6 +31,15 @@ export function DashboardNavbar() {
   const [controller, dispatch] = useMaterialTailwindController();
   const { fixedNavbar, openSidenav } = controller;
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const handleLive = () => {
+    navigate("/connect")
+  }
+
+  const handleHome = () => {
+    navigate("/")
+  }
   
   return (
     <Navbar
@@ -44,12 +53,15 @@ export function DashboardNavbar() {
       blurred={fixedNavbar}
     >
       <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
-        <Typography variant="h3" color="blue-gray" className="ml-12">
+        <Typography variant="h3" color="blue-gray" className="ml-12" onClick={handleHome}>
             LearnX
         </Typography>
         <div className="flex flex-row mx-auto">
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600" onClick={handleLive}>
+            Live
+          </Typography>
           <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
-            Share docs
+            Notes Sharing
           </Typography>
           <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
             Community

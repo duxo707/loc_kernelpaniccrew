@@ -1,6 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Dashboard, Auth } from "@/layouts";
 import { DashboardNavbar } from "./widgets/layout";
+import RoomPage from "./room/index.jsx";
+import RoomId from "./pages/dashboard/RoomId";
 import coursecontent from "./pages/dashboard/coursecontent";
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/course/:coursename" element={<coursecontent />} />
+        <Route path="/connect" element={<RoomId />} />
+        <Route path="/connect/room/:roomId" element={<RoomPage />} />
         {/* <Route path="*" element={<Navigate to="/dashboard/" replace />} /> */}
       </Routes>
     </>
