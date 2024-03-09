@@ -20,9 +20,15 @@ import {
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { ProfileInfoCard, MessageCard } from "@/widgets/cards";
-import { platformSettingsData, conversationsData, projectsData } from "@/data";
+import { platformSettingsData, conversationsData, projectsData, coursesData } from "@/data";
+import { useNavigate } from "react-router-dom";
 
 export function Profile() {
+  const navigate = useNavigate();
+
+  const handleCourse = (name) => {
+    navigate(`/course/${name}`);
+  };
   return (
     <>
       {/* <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url('/img/background-image.png')] bg-cover	bg-center">
@@ -140,7 +146,7 @@ export function Profile() {
             </div>
           </div> */}
           <div className="px-4 pb-4">
-            <Typography variant="h6" color="blue-gray" className="mb-2">
+            <Typography variant="h4" color="blue-gray" className="mb-2">
               Courses
             </Typography>
             {/* <Typography
@@ -150,7 +156,7 @@ export function Profile() {
               Architects design houses
             </Typography> */}
             <div className="mt-6 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-4">
-              {projectsData.map(
+              {coursesData.map(
                 ({ img, title, description }) => (
                   <Card key={title} color="transparent" shadow={false}>
                     <CardHeader
@@ -168,7 +174,8 @@ export function Profile() {
                       <Typography
                         variant="h5"
                         color="blue-gray"
-                        className="mt-1 mb-2"
+                        className="mt-1 mb-2 hover:cursor-pointer hover:text-gray-600"
+                        onClick={() => handleCourse(title)}
                       >
                         {title}
                       </Typography>

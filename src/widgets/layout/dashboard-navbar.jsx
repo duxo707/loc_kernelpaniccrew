@@ -31,8 +31,7 @@ export function DashboardNavbar() {
   const [controller, dispatch] = useMaterialTailwindController();
   const { fixedNavbar, openSidenav } = controller;
   const { pathname } = useLocation();
-  const [layout, page] = pathname.split("/").filter((el) => el !== "");
-
+  
   return (
     <Navbar
       color={fixedNavbar ? "white" : "transparent"}
@@ -45,18 +44,18 @@ export function DashboardNavbar() {
       blurred={fixedNavbar}
     >
       <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
-        <Typography variant="h6" color="blue-gray" className="ml-4">
+        <Typography variant="h3" color="blue-gray" className="ml-12">
             LearnX
         </Typography>
         <div className="flex flex-row mx-auto">
-          <Typography variant="h6" color="blue-gray" className="ml-4 font-semibold">
-            hehe
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
+            Share docs
           </Typography>
-          <Typography variant="h6" color="blue-gray" className="ml-4 font-semibold">
-            Live
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
+            Community
           </Typography>
-          <Typography variant="h6" color="blue-gray" className="ml-4 font-semibold">
-            Courses
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
+            Lectures
           </Typography>
         </div>
         <div className="flex items-center">
