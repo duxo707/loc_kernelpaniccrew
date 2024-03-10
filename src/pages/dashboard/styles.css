@@ -1,0 +1,41 @@
+/* Body styles */
+body {
+    background-color: #ffffff; /* Beige background */
+    color: black; /* Black text color */
+  }
+  
+  /* Container styles */
+  .container {
+    width: 10vw; 
+    /* height: 30vh; */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Input styles */
+  input[type="text"] {
+    width: calc(50% - 20px); /* Adjust width with padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 20px;
+    background-color: black; /* Black button background */
+    color: rgb(62, 161, 161); /* Beige text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #333; /* Darker background on hover */
+  }
+  

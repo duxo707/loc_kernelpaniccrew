@@ -90,6 +90,6 @@ app.get('/api/chat-url', (req, res) => {
   res.json({ localUrl: localChatAppURL, networkUrl: networkChatAppURL });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 console.log(`Local Server running on port ${PORT}`);
 server.listen(PORT);

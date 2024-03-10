@@ -25,7 +25,7 @@ const RoomPage = () => {
       sharedLinks: [
         {
           name: "Copy Link",
-          url: `https://localhost:5173/connect/room/${roomId}`,
+          url: `localhost:5173/connect/room/${roomId}`,
         },
       ],
     });

@@ -37,7 +37,7 @@ export function Profile() {
       <Card className="mx-3 mt-8 mb-6 border border-blue-gray-100">
         <CardBody className="p-4">
           <div className="mb-10 flex items-center justify-between flex-wrap gap-6">
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               <Avatar
                 src="/img/bruce-mars.jpeg"
                 alt="bruce-mars"
@@ -56,7 +56,7 @@ export function Profile() {
                   Student
                 </Typography>
               </div>
-            </div>
+            </div> */}
             {/* <div className="w-96">
               <Tabs value="app">
                 <TabsHeader>

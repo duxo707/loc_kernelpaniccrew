@@ -41,6 +41,17 @@ export function DashboardNavbar() {
     navigate("/")
   }
   
+  const handleCommunity = () => {
+    window.open("http://localhost:3000", "_blank");
+  };
+
+  const handleCourses = () => {
+    navigate("/")
+  }
+
+  const handleRec = () => {
+    navigate("/recommend")
+  }  
   return (
     <Navbar
       color={fixedNavbar ? "white" : "transparent"}
@@ -53,21 +64,21 @@ export function DashboardNavbar() {
       blurred={fixedNavbar}
     >
       <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
-        <Typography variant="h3" color="blue-gray" className="ml-12" onClick={handleHome}>
+        <Typography variant="h3" color="blue-gray" className="ml-12 hover:cursor-pointer" onClick={handleHome}>
             LearnX
         </Typography>
         <div className="flex flex-row mx-auto">
           <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600" onClick={handleLive}>
             Live
           </Typography>
-          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
-            Notes Sharing
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600" onClick={handleRec}>
+            Get Recommendations
           </Typography>
-          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600" onClick={handleCommunity}>
             Community
           </Typography>
-          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600">
-            Lectures
+          <Typography variant="h6" color="blue-gray" className="ml-12 font-semibold hover:cursor-pointer hover:text-gray-600" onClick={handleHome}> 
+            Courses
           </Typography>
         </div>
         <div className="flex items-center">

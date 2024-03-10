@@ -1,0 +1,55 @@
+/* Beige background for the form */
+  .form-container {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Unique class for question text */
+  .weird-unique-4 {
+    color: black; /* Text color */
+    font-size: large;
+  }
+
+  .weird-unique-3 {
+    color: black; /* Text color */
+    font-size: large;
+  }
+  
+  /* Unique class for the submit button */
+  .weird-unique-6 {
+    background-color: blue; /* Button background color */
+    color: black; /* Button text color */
+    border: none;
+    margin-top: 2px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .weird-unique-6:hover {
+    background-color: gray; /* Darker background color on hover */
+  }
+  
+  /* Styling for radio buttons */
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 1rem;
+  }
+  
+  /* Styling for form inputs */
+  input[type="radio"] {
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+  
